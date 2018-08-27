@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>HWCore Js-Kernel Documentation</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="styles/index.css">
+        <script type="text/javascript">
+            if (document.location.hostname !== "localhost" && document.location.hostname !== "127.0.0.1") {
+                HWCPATH_ROOT = "http://hw-core.github.io/";
+            } else { // for dev
+                HWCPATH_ROOT = "../../../../../../";
+            }
+
+            // we must do it programmatically
+            HWC_AFTERBOOT = "js/index.html.js";
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = HWCPATH_ROOT + 'hwcore/modules/js/src/kernel/index.js';
+            head.appendChild(script);
+        </script>
+    </head>
+    <body>
+        <div id="main">
+        </div>
+    </body>
+</html>

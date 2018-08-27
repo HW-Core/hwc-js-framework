@@ -1,0 +1,14 @@
+var path_prefix = __dirname || "./";
+
+module.exports = {
+  watch: true,
+  mode: "production",
+  entry: [
+      'src/app.js'
+  ],
+  output: {
+      path: path_prefix + '/srv',
+      filename: 'bundle.js'
+  },
+  devtool: 'source-map'
+};

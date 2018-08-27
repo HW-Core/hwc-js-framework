@@ -14,7 +14,7 @@ try {
     conf = {}
 }
 
-module.exports = merge(conf, {
+module.exports = merge({
     resolve: {
         modules: [
             p.resolve(__dirname),
@@ -29,4 +29,4 @@ module.exports = merge(conf, {
     entry: [
         hwc_conf.paths.hwc_js_kernel,
     ]
-});
+}, conf);
